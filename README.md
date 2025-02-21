@@ -76,12 +76,18 @@ python3 gui.py
 ## Screenshots
 
 ### 1. Game Board:
+![Screenshot 2025-02-21 020138](https://github.com/user-attachments/assets/7e0057d3-e6ef-4123-8de7-ff0236f70511)
 
 ### 2. Quantum Move Visualization:
+![Screenshot 2025-02-21 143747](https://github.com/user-attachments/assets/5fe71fc9-4c60-49ef-9ea9-0d42131b2dca)
 
 ### 3. Entangled Move Visualization:
+![Screenshot 2025-02-21 143753](https://github.com/user-attachments/assets/59e594d4-6323-4858-9f3c-cbbf7c9f85a2)
 
 ### 4. Winner Message:
+![Screenshot 2025-02-21 020202](https://github.com/user-attachments/assets/ab5ba301-1d86-413a-9f15-ed728013c5cc)
+
+![Screenshot 2025-02-21 145301](https://github.com/user-attachments/assets/a194dbac-3c9a-4285-beff-b2af599e7053)
 
 ### 5. Example of Playing the Game:
 
