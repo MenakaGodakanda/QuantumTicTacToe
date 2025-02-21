@@ -78,7 +78,7 @@ python3 gui.py
 ### 1. Game Board:
 ![Screenshot 2025-02-21 020138](https://github.com/user-attachments/assets/7e0057d3-e6ef-4123-8de7-ff0236f70511)
 
-### 2. Quantum Move Visualization:
+### 2. Quantum (Superposition) Move Visualization:
 ![Screenshot 2025-02-21 143747](https://github.com/user-attachments/assets/5fe71fc9-4c60-49ef-9ea9-0d42131b2dca)
 
 ### 3. Entangled Move Visualization:
@@ -94,7 +94,65 @@ python3 gui.py
 
 https://github.com/user-attachments/assets/3f019296-a47d-4642-aecc-0c55893c50a9
 
+## Quantum Moves Further Explained
 
+### Quantum (Superposition) Moves
+- When a player makes a quantum move, the `apply_superposition()` function generates the circuit and displays it on the terminal.
+- The qubit is measured, and the result (`X` or `O`) is placed on the board.
+- Below is the quantum circuit for a single-qubit superposition. <br>
+![Screenshot 2025-02-21 143747](https://github.com/user-attachments/assets/5fe71fc9-4c60-49ef-9ea9-0d42131b2dca)
+- **Explanation**:
+  - `q0`: The qubit starts in the state |0⟩.
+  - `H`: The Hadamard gate is applied to `q0`, creating a superposition.
+  - `M`: The qubit is measured, and the result is stored in the classical bit `c0`.
+- **Circuit Description**:
+  - **Qubit (`q0`)**: The circuit has one qubit (`q0`) and one classical bit (`c0`).
+  - **Hadamard Gate (`H`)**:
+    - The Hadamard gate is applied to `q0`, creating a superposition state.
+    - Mathematically, the Hadamard gate transforms the qubit state as follows.
+    - This means the qubit is in an equal superposition of `|0⟩` and `|1⟩`.
+
+$$ H∣0⟩ = {{∣0⟩ + ∣1⟩} \over \sqrt2} , H∣1⟩ = {{∣0⟩ - ∣1⟩} \over \sqrt2} $$
+
+  - **Measurement (`M`)**:
+    - After applying the Hadamard gate, the qubit is measured.
+    - The measurement collapses the superposition into either `|0⟩` or `|1⟩`, and the result is stored in the classical bit `c0`.
+- **Summary**:
+  - Represents a single-qubit superposition.
+  - Applies a Hadamard gate to create a superposition and measures the result.
+  - Used for quantum moves in the game.
+
+### Entanglement Moves
+- In quantum mechanics, entanglement is a phenomenon where two or more particles become linked, and the state of one particle instantly influences the state of the other, no matter the distance between them.
+- In your game, when you make an entangled move, two cells are linked together. The result of the quantum measurement (collapse) affects both cells simultaneously.
+- When you click an empty cell, the `apply_entanglement()` function in `quantum_logic.py` is called.
+- This function creates a quantum circuit with two qubits, entangles them, and measures their states.
+- The measurement result (e.g., `00`, `01`, `10`, or `11`) determines the marks (`X` or `O`) for both cells.
+- Below is the quantum circuit for two-qubit entanglement. <br>
+![Screenshot 2025-02-21 143753](https://github.com/user-attachments/assets/59e594d4-6323-4858-9f3c-cbbf7c9f85a2)
+- **Explanation**:
+  - `q0`: The first qubit starts in the state `|0⟩`.
+  - `H`: The Hadamard gate is applied to `q0`, creating a superposition.
+  - `■`: The CNOT gate is applied with `q0` as the control qubit and `q1` as the target qubit.
+  - `X`: The target qubit (`q1`) is flipped if the control qubit (`q0`) is |`1`⟩.
+  - `M`: Both qubits are measured, and the results are stored in the classical bits `c0` and `c1`.
+- **Circuit Description**:
+  - **Qubits (`q0` and `q1`)**: The circuit has two qubits (`q0` and `q1`) and two classical bits (`c0` and `c1`).
+  - **Hadamard Gate (`H`) on `q0`**:
+    - The Hadamard gate is applied to `q0`, creating a superposition state.
+  - **CNOT Gate (`CX`)**:
+    - The CNOT gate is applied with `q0` as the control qubit and `q1` as the target qubit.
+    - This gate entangles the two qubits, creating a Bell state.
+    - The state of `q1` depends on the state of `q0`.
+
+$$ ∣\Phi^+⟩ = {{∣00⟩ + ∣11⟩} \over \sqrt2} $$
+
+  - **Measurements (M)**:
+    - Both qubits are measured, and the results are stored in the classical bits `c0` and `c1`.
+- **Summary**:
+  - Represents a two-qubit entanglement.
+  - Applies a Hadamard gate to the first qubit and a CNOT gate to entangle the two qubits.
+  - Used for entangled moves in the game.
 
 ## Project Structure
 ```
