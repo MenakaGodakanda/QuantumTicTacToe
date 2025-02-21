@@ -2,20 +2,45 @@
 
 An interactive game that teaches quantum computing concepts like superposition and entanglement through a quantum version of Tic-Tac-Toe. This project is built using Python, Pygame, and Qiskit, making it a great educational tool for beginners interested in quantum mechanics and quantum computing.
 
-<img width="999" alt="Screenshot 2025-02-21 at 2 43 25 pm" src="https://github.com/user-attachments/assets/07175f2c-8f3d-4e9a-ab08-b1f73fd1f97d" />
-
 ## Overview
-### 1. Graphical Interface (`gui.py`)
-- Uses Pygame to render the board and handle player interactions.
-- Captures player moves and sends them to game_logic.py.
 
-### 2. Game Moves (`game_logic.py`)
-- Processes player moves and validates the board state.
-- Decides when to invoke quantum logic for superposition or entanglement.
+<img width="1365" alt="Screenshot 2025-02-21 at 7 36 13 pm" src="https://github.com/user-attachments/assets/c092ee47-7feb-46f9-8a3b-ab28d64eb9f7" />
 
-### 3. Quantum Moves (`quantum_logic.py`)
-- Uses Qiskit to simulate quantum behavior.
-- Implements quantum mechanics like superposition and entanglement.
+### Explanation
+
+#### 1. Graphical Interface (`gui.py`)
+- The entry point of the application.
+- Handles the graphical user interface using `pygame`.
+- Manages user input (e.g., mouse clicks) and renders the game board.
+
+#### 2. Game Moves (`game_logic.py`)
+- Contains the core game logic.
+- Manages the game state (e.g., the board, player turns).
+- Handles moves (classical and quantum) and checks for win conditions.
+
+#### 3. Quantum Moves (`quantum_logic.py`)
+- Simulates quantum moves using `qiskit`.
+- Generates quantum circuits for superposition and entanglement.
+- Displays the quantum circuits in the terminal.
+
+### Flow of the Program
+
+#### 1. User Interaction:
+- The user interacts with the game through the GUI (`gui.py`).
+- Clicks on the board to make moves.
+
+#### 2. Game Logic:
+- `gui.py` calls `game_logic.py` to update the game state and check for valid moves.
+
+#### 3. Quantum Simulation:
+- If a quantum move is made, `game_logic.py` calls `quantum_logic.py` to simulate the move using `qiskit`.
+
+#### 4. Visualization:
+- `quantum_logic.py` generates and displays the quantum circuit in the terminal.
+
+#### 5. Win Condition:
+- After each move, `game_logic.py` checks for a win condition and updates the GUI accordingly.
+
 
 ## Features
 
