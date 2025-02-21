@@ -161,9 +161,7 @@ QuantumTicTacToe/
 ├── gui.py                # Main GUI script using pygame
 ├── game_logic.py         # Game logic and rules
 ├── quantum_logic.py      # Quantum simulation and circuit generation
-├── README.md             # Project documentation
-├── quantum_move.png      # Example quantum circuit visualization
-└── entanglement.png      # Example entangled circuit visualization
+└── README.md             # Project documentation
 ```
 ## License
 
