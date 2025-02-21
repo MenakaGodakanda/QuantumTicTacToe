@@ -29,6 +29,7 @@ An interactive game that teaches quantum computing concepts like superposition a
 To run this project, you need the following Python libraries:
 - `pygame` (for the GUI)
 - `qiskit` (for quantum simulation)
+- `qiskit-aer` (for high-performance simulator)
 - `matplotlib` (for quantum circuit visualization)
 - `pylatexenc` (for rendering LaTeX in quantum circuit diagrams)
 
@@ -49,7 +50,7 @@ source tictactoe/bin/activate  # (Linux/macOS)
 
 ### Step 3: Install Dependencies
 ```
-pip install pygame qiskit matplotlib pylatexenc
+pip install pygame qiskit qiskit-aer matplotlib pylatexenc
 ```
 
 ### Step 4: Run the Game
