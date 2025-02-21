@@ -92,6 +92,10 @@ python3 gui.py
 ### 5. Example of Playing the Game:
 
 
+https://github.com/user-attachments/assets/3f019296-a47d-4642-aecc-0c55893c50a9
+
+
+
 ## Project Structure
 ```
 QuantumTicTacToe/
